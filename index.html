@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Explorer</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0a0a1a;
+            color: #e0e0ff;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://images.unsplash.com/photo-1454789548928-9efd52dc4031');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(10, 10, 30, 0.8);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #6bb9f0;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: rgba(20, 20, 50, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background-color: #4a4a8a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            background-color: #6a6aaa;
+            transform: scale(1.05);
+        }
+        
+        #planet-info {
+            padding: 15px;
+            background-color: rgba(30, 30, 70, 0.7);
+            border-radius: 5px;
+            margin: 10px 0;
+            min-height: 100px;
+        }
+        
+        #space-image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .space-image {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .space-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #6bb9f0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(10, 10, 30, 0.8);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🚀 Cosmic Explorer</h1>
+        <p>Explore the wonders of our universe</p>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Planet Information</h2>
+            <div id="planet-info">
+                <p>Select a planet to learn more about it.</p>
+            </div>
+            <button id="change-text-btn">Show Mars Facts</button>
+            <button id="style-btn">Toggle Space Mode</button>
+        </section>
+
+        <section class="container">
+            <h2>Galactic Images</h2>
+            <div id="space-image-container">
+                <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564" alt="Galaxy" class="space-image">
+                <img src="https://images.unsplash.com/photo-1506318137071-a8e063b4bec0" alt="Nebula" class="space-image">
+            </div>
+            <button id="add-image-btn">Add Cosmic Image</button>
+            <button id="remove-image-btn">Remove Last Image</button>
+        </section>
+
+        <section class="container">
+            <h2>Space Missions</h2>
+            <ul id="missions-list">
+                <li>Apollo 11 - Moon Landing</li>
+                <li>Voyager 1 - Interstellar Space</li>
+            </ul>
+            <button id="add-mission-btn">Add Random Mission</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Cosmic Explorer | Made with ♥ and JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
